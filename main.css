@@ -1,0 +1,416 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Maven+Pro&family=Source+Code+Pro&display=swap');*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+body {
+    color: #ddd;
+    background-color: #000;
+}
+
+/* Hero section starts */
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+/* creating top shape */
+.shape {
+    position: absolute;
+    outline: 2px solid rgb(139, 35, 35, 0.6);
+    padding: 260px 260px;
+    padding: 170px 230px;
+    border-radius: 0 200px 1000px 800px;
+    font-size: 50px;
+    color: rgb(139, 35, 35, 0.4);
+}
+
+/* navigation styling starts */
+nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+    color: #ddd;
+    z-index: 1;
+}
+
+nav .logo h1 {
+    font-size: 45px;
+}
+
+/* aligning menu links */
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+/* menu links styling */
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(139, 35, 35);
+    transition: 400ms;
+    text-transform: capitalize;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+/* spaning elements styling */
+span {
+    color: rgb(139, 35, 35);
+}
+
+/* hero content container styling */
+.profile .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+    padding-top: 5%;
+}
+
+
+/* hero textbox styling */
+.textbox {
+    width: 50%;
+}
+
+.textbox h1 {
+    margin-top: 20%;
+}
+
+.textbox p {
+    color: #ddd;
+    padding: 20px 0;
+    margin-top: 30px;
+    line-height: 2em;
+}
+
+/* text box button styling */
+.textbox button {
+    background-color: rgb(139, 35, 35, 0.6);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    width: 100px;
+    transform: skew(-20deg);
+    border: none;
+    transition: 0.3s;
+    outline: none;
+    margin-top: 20px;
+    text-transform: uppercase;    
+}
+
+.textbox button:hover {
+    background-color: transparent;
+    box-shadow: 0 0 0 1px rgb(139, 35, 35);
+    color: rgb(139, 35, 35);
+    cursor: pointer;
+}
+
+/* hero profile image sizing and styling */
+.profile .container img {
+    width: 50%;
+    height: 90vh;
+    opacity: 0.7;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+/* hero section ends */
+
+/*portfolio section starts */
+#portfolio .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    text-transform: capitalize;
+    padding-top: 5%;
+    margin-top: 5%;
+}
+
+/* sizing and styling portfolio image */
+#portfolio .container img {
+    width: 40%;
+    height: 90vh;
+    opacity: 0.3;
+    padding: 2%;
+}
+
+.timeline {
+    position: relative;
+    margin: 100px auto;
+    max-width: 400px;
+}
+
+.timeline .container {
+    position: relative;
+    padding: 5px 10px;
+    /* animation: showup 1s linear forwards;
+    opacity: 0; */
+}
+
+/* @keyframes showup {
+    0%{
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+} */
+
+/*.timeline .container:nth-child(1){
+    animation-delay: 0s;
+}
+
+.timeline .container:nth-child(2){
+    animation-delay: 1s;
+}
+
+.timeline .container:nth-child(3){
+    animation-delay: 2s;
+}
+
+.timeline .container:nth-child(4){
+    animation-delay: 3s;
+}
+
+.timeline .container:nth-child(5){
+    animation-delay: 4s;
+}
+
+.timeline .container:nth-child(6){
+    animation-delay: 5s;
+}*/
+
+.content-box {
+    padding: 5px 5px;
+    position: relative;
+}
+
+.left-container {
+    left: -60%;
+    color: rgb(139, 35, 35, 0.8);
+    border-radius: 10px;
+    outline: 1px solid #ddd;
+}
+
+.right-container {
+    left: 50%;
+    outline: 1px solid rgb(139, 35, 35, 0.8);
+    color: #ddd;
+    border-radius: 10px;
+}
+
+.timeline::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: rgb(139, 35, 35, 0.8);
+    top: 0;
+    z-index: -1;
+    margin-left: 2px;
+    left: 44.5%;
+    /* animation: moveline 3s linear forwards; */
+}
+
+/* @keyframes moveline {
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+} */
+
+.left-arrow {
+    width: 0;
+    height: 0;
+    position: absolute;
+    z-index: 1;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid rgb(139, 35, 35, 0.6);
+    top: 30%;
+    right: -7%;
+}
+
+.right-arrow {
+    width: 0;
+    height: 0;
+    position: absolute;
+    z-index: 1;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid rgb(139, 35, 35, 0.6);
+    top: 30%;
+    right: 104%;
+}
+
+.down-arrow {
+    width: 0;
+    height: 0;
+    position: absolute;
+    z-index: 1;
+    border-right: 10px solid transparent;
+    border-top: 20px solid rgb(139, 35, 35, 0.6);
+    border-left: 10px solid transparent;
+    top: 100%;
+    right: 52.5%;
+}
+
+.content-box .small-left {
+    padding: 10px 12px;
+    border-radius: 100%;
+    position: absolute;
+    right: -15%;
+    color: #ddd;
+}
+
+.content-box .small-right {
+    padding: 10px 12px;
+    border-radius: 100%;
+    position: absolute;
+    right: 101%;
+    color: rgb(139, 35, 35, 0.6);
+}
+/* portfolio section ends */
+
+/* project section starts */
+#projects .container {
+    width: 1400px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6%;
+    height: 30vh;
+}
+
+/* sizing and styling project section cards */
+.card {
+    background-color: rgb(139, 35, 35, 0.6);
+    padding: 30px;
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 10px 10px 0 0 rgb(139, 35, 35, 0.2);
+    text-align: center;
+    color: #ddd;
+    border: none;
+    outline: none;
+    transition: 0.5s;
+    font-size: 14px;
+}
+
+.card:hover {
+    background-color: transparent;
+    box-shadow: 0 0 0 1px rgb(139, 35, 35);
+    padding: 40px;
+    font-size: 20px;
+    color: rgb(139, 35, 35);
+}
+
+/* styling the card buttons */
+#projects a {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 16px;
+    line-height: 30px;
+}
+/* project section ends */
+
+/* contact section starts */
+#contact .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: auto;
+    padding-bottom: 2%;
+}
+
+#contact ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px 5px;
+}
+
+#contact ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: .3s;
+}
+
+#contact ul li a:hover {
+    color: rgb(139, 35, 35, 1.0);
+}
+
+#contact form {
+    border: none;
+/*    outline: 2px solid rgb(139, 35, 35, .6);*/
+    border-radius: 3px;
+    width: 70%;
+    padding: 0 20px;
+    margin: auto;
+    transform: skew(-5deg);
+}
+
+#contact .text-field {
+    width: 70%;
+    margin: 5px auto;
+    height: 33px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    background-color: #ccc;
+    color: rgb(139, 35, 35, 1.0);
+    padding: 10px;
+}
+
+#contact .submitBtn {
+    background-color: rgb(139, 35, 35, 0.6);
+    color: #fff;
+    padding: 10px;
+    width: 27%;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    text-transform: uppercase;
+    transition: .3s; 
+}
+
+#contact .submitBtn:hover {
+    background-color: transparent;
+    box-shadow: 0 0 0 1px rgb(139, 35, 35);
+    color: rgb(139, 35, 35);
+    cursor: pointer;
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+}
+
+/* contact section ends */
+
+/* footer section starts */
+/* footer section ends */
